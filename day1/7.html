@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Sudhanshu</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ankit</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Sakshi</td>
+                <td>22</td>
+            </tr>
+        </table>
+        <button>Change color</button>
+    </div>
+</body>
+<script>
+    $("button").click(function(){
+        $("tr:odd").css("background-color", "pink");
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="div">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur repudiandae quia corporis accusantium amet
+            aut illum quasi reprehenderit nostrum aperiam, rem sunt asperiores perspiciatis quisquam facere aliquid
+            officiis officia fugiat nulla sit ad eos maxime voluptates quos? Exercitationem nobis dolor unde doloremque,
+            culpa facere error ea officiis velit eum deserunt delectus provident, quos necessitatibus. Accusantium
+            suscipit, nulla maiores recusandae vitae maxime ipsa vero ipsum excepturi reiciendis sed, architecto qui ad
+            id minima alias illum dolorum laborum ab nemo praesentium modi voluptates, repellat possimus. Doloribus,
+            nemo veniam accusamus impedit possimus assumenda laudantium natus sequi doloremque, molestiae quibusdam,
+            nulla tempora laboriosam debitis?</p>
+    </div>
+    <img style="margin: 10%;" width="50%" src="guitar.jpg" alt="guitar">
+</body>
+<script>
+    $("img").hover(function(){
+        $("#div").remove();
+    },function(){
+        $("#div").show();
+    });
+        
+
+</script>
+
+</html>
