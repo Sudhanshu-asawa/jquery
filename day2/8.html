@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Populate City Dropdown Based on Country Selected</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+</head>
+
+
+<body>
+    
+    <div id="textcopy">
+        <a href="https://www.w3schools.com/jquery/jquery_animate.asp"> w3schools Annimation</a>
+        <br>
+        <a href="https://github.com/Sudhanshu-asawa/jquery">Github</a>
+        <br>
+        <a href="https://www.youtube.com/">Youtube</a>
+        <br>
+        <button>Get Href</button>
+        <br>
+        <input size="50" type="text" disabled>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            var href=$("a:first").attr("href");
+            $("input").val(href);
+        });
+    });
+</script>
+
+</html>

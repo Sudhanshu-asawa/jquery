@@ -1,0 +1,137 @@
+body{
+    background: rgb(202, 181, 166);
+}
+.container{
+    text-align: center;
+    color: #410b0b;
+
+}
+.container label{
+    padding: 1%;
+    width: 50px;
+    background: #7a4c4c;
+    color: rgb(228, 199, 178);
+    font-size: large;
+    margin-left: 1%;
+}
+.container input{
+    font-size: large;
+    background: rgb(228, 199, 178);
+    padding: 0.75%;
+}
+.container #submit{
+    width: 50%;
+    margin-top: 2%;
+    background: #7a4c4c;
+    color: rgb(228, 199, 178);
+}
+input[type='submit']:hover {
+    background-color: #45a049;
+  }
+  
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+  }
+  
+  th,
+  td {
+    text-align: left;
+    padding: 13px;
+    max-width: 500px;
+    word-break: break-all;
+  }
+  
+  th {
+    background-color: #7a4c4c;
+    color: rgb(228, 199, 178);
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgb(228, 199, 178);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  a .button {
+    background-color: #7a4c4c;
+    border: none;
+    color: rgb(228, 199, 178);
+    padding: 15px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 80px;
+    cursor: pointer;
+  }
+  
+  .btncenter {
+    display: flex;
+    justify-content: center;
+  }
+  
+  tbody {
+    max-width: 40px;
+    word-break: break-all;
+  }
+  
+  .up {
+    color: black !important;
+    background: none !important;
+    /* margin: 21px 9px 10px 0px !important; */
+    /* position: absolute !important; */
+  }
+  
+  .down {
+    color: black !important;
+    background: none !important;
+    /* margin: 21px 9px 10px 0px !important;
+    position: absolute !important; */
+  }
+  
+  .arrowposition {
+    display: inline;
+  }
+  .material-icons {
+    font-size: 14px;
+  }
+  
+  .up:hover {
+    color: rgb(228, 199, 178) !important;
+    background-color: black;
+  }
+  
+  .down:hover {
+    color: rgb(228, 199, 178) !important;
+    background-color: black;
+  }
+  
+  .uprating {
+    color: black !important;
+    background: none !important;
+    /* margin: 21px 9px 10px 0px !important;
+    position: absolute !important; */
+  }
+  
+  .downrating {
+    color: black !important;
+    background: none !important;
+    /* margin: 21px 9px 10px 0px !important;
+  position: absolute !important; */
+  }
+  
+  .uprating:hover {
+    color:rgb(228, 199, 178)!important;
+    background-color: black;
+  }
+  
+  .downrating:hover {
+    color: rgb(228, 199, 178) !important;
+    background-color: black;
+  }

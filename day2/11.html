@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Populate City Dropdown Based on Country Selected</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+</head>
+
+
+<body>
+
+    <div id="textcopy">
+        <form action="">
+            <label>Img NAme</label>
+            <select name="img" id="img">
+                <option value="guitar">Guitar</option>
+                <option value="piano">Piano</option>
+                <option value="flute">Flute</option>
+            </select>
+           
+        </form>
+        
+    </div>
+    <img src="" width="400px" alt="">
+
+</body>
+<script>
+    $(document).ready(function() {
+        $("#img").on("change", function(){
+            var img1=$(this).val();
+        img_src=img1.concat(".","jpg")
+        $("img").attr("src",img_src)
+        })
+        
+    });
+</script>
+
+</html>
