@@ -1,0 +1,93 @@
+body {
+  background: rgb(40, 40, 40);
+}
+
+.container {
+  text-align: center;
+  color: #d9caca;
+
+}
+
+.table .button {
+  margin: 3% 0% 1% 41%;
+  font-size: x-large;
+  background-color: rgb(255, 255, 255);
+}
+
+.container label {
+  padding: 1%;
+  width: 50px;
+  background: #ffffff;
+  color: rgb(241, 238, 238);
+  font-size: large;
+  margin-left: 1%;
+}
+
+.container input {
+  font-size: large;
+  background: rgb(255, 254, 254);
+  padding: 0.75%;
+}
+
+.container #submit {
+  width: 50%;
+  margin-top: 2%;
+  background: #ffffff;
+  color: rgb(206, 206, 206);
+}
+
+
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 13px;
+  max-width: 500px;
+  word-break: break-all;
+}
+
+th {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+tr:nth-child(even) {
+  background-color: rgb(175, 173, 172);
+  color: black;
+}
+
+h1 {
+  text-align: center;
+}
+
+a .button {
+  background-color: #b7b5b5;
+  border: none;
+  color: rgb(42, 41, 40);
+  padding: 15px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 80px;
+  cursor: pointer;
+}
+
+.btncenter {
+  display: flex;
+  justify-content: center;
+}
+
+tbody {
+  max-width: 40px;
+  word-break: break-all;
+  color: white;
+}
