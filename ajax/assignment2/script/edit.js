@@ -1,7 +1,6 @@
 $(document).ready(function () {
     $("form").submit(function (event) {
         var id = sessionStorage.getItem("id");
-
         var formData = {
             id: id,
             Post_description: $("#des").val(),
@@ -9,28 +8,24 @@ $(document).ready(function () {
         }
 
         $.ajax({
-           
             url: "php/edit.php",
             type: "POST",
             data: formData,
             dataType: "JSON",
             encode: true,
-            success: function(response) {
+            success: function (response) {
                 if (response[0]['success']) {
                     alert(response[0]['message']);
                     window.location.href = 'view.html';
-
                 }
-                else{
+                else {
                     alert(response[0]['message']);
                 }
             },
             error: function (xhr, status, error) {
                 alert("failed" + xhr + status + error);
             }
-
         });
-
         event.preventDefault();
     });
 });

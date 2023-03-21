@@ -1,6 +1,5 @@
 $(document).ready(function () {
     $("form").submit(function (event) {
-
         var formData = {
             userid: $("#userid").val(),
             Post_description: $("#Post_description").val(),
@@ -8,7 +7,6 @@ $(document).ready(function () {
         }
 
         $.ajax({
-           
             url: "php/insert.php",
             type: "POST",
             data: formData,
@@ -27,9 +25,7 @@ $(document).ready(function () {
             error: function (xhr, status, error) {
                 alert("failed" + xhr + status + error);
             }
-
         });
-
         event.preventDefault();
     });
 });

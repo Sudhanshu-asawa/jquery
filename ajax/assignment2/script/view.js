@@ -9,13 +9,9 @@ $(document).ready(function () {
             // Clear previous table rows
             if (response[0]['message']) {
                 alert(response[0]['message'])
-
             }
             else {
                 $("#mytable tbody").empty()
-
-
-
                 var len = response.length;
                 for (var i = 0; i < len; i++) {
                     var id = response[i].id;
@@ -29,20 +25,15 @@ $(document).ready(function () {
                     "</tr>";
                     $("#mytable tbody").append(tr_str);
                 }
-
-
                 $(".deleteBtn").on("click", function () {
                     var id = $(this).data("id");
                     var row = $(this).closest("tr");
                     if (confirm("Are you sure to delete")) {
-
-
                         $.ajax({
                             type: "POST",
                             url: "php/delete.php",
                             data: { id: id },
                             success: function () {
-
                                 row.remove();
                             }
                         });

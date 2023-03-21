@@ -64,9 +64,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     exit;
                 }
             }
+            if ($updatedes == null && $updatetitle == null) {
+                $return_arr[] = array(
+                    "message" => "Post Title and Description Updated"
+                );
+                echo json_encode($return_arr);
+                exit;
+            }
         }
     }
-
 }
 
 ?>
