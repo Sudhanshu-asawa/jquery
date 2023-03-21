@@ -15,7 +15,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo json_encode($result_arr);
         exit;
     }
+    if(ctype_space($firstname) ){
+        $result_arr[] = array("message" => "Invalid First Name");
+        echo json_encode($result_arr);
+        exit;
+    }
     if (!(preg_match('/^[a-zA-Z ]{1,30}$/', $lastname))) {
+        $result_arr[] = array("message" => "Invalid Last Name");
+        echo json_encode($result_arr);
+        exit;
+    }
+
+    if(ctype_space($lastname)){
         $result_arr[] = array("message" => "Invalid Last Name");
         echo json_encode($result_arr);
         exit;
@@ -34,6 +45,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     if (strlen($password)<6) {
         $result_arr[]=array("message"=>"Min. Length of Password is 6");
+        echo json_encode($result_arr);
+      exit;
+    }
+    if(ctype_space($password)){
+        $result_arr[]=array("message"=>"Password invalid");
         echo json_encode($result_arr);
       exit;
     }

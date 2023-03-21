@@ -18,6 +18,9 @@
     padding: 64px 15px 24px;
     margin: 0 auto;
   }
+  .link{
+    text-decoration:none ;
+  }
   .form .control {
     margin: 0 0 24px;
   }
@@ -48,6 +51,7 @@
     font-family: monospace;
     font-size: 16px;
   }
+  
   
   .block-cube {
     position: relative;

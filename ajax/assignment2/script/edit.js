@@ -16,10 +16,13 @@ $(document).ready(function () {
             dataType: "JSON",
             encode: true,
             success: function(response) {
-                if (response[0]['message']) {
+                if (response[0]['success']) {
                     alert(response[0]['message']);
                     window.location.href = 'view.html';
 
+                }
+                else{
+                    alert(response[0]['message']);
                 }
             },
             error: function (xhr, status, error) {

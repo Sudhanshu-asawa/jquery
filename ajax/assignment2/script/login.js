@@ -12,7 +12,7 @@ $(document).ready(function () {
             type: "POST",
             data: formData,
             dataType: "JSON",
-            // encode: true,
+            encode: true,
             success: function (response) {
                 console.log(response);
                 if (response[0]['success']) {
