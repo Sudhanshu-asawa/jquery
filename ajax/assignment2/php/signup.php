@@ -9,29 +9,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+
     if (!(preg_match('/^[a-zA-Z ]{1,30}$/', $firstname))) {
-        $result_arr[]=array("message"=>"Invalid First Name");
+        $result_arr[] = array("message" => "Invalid First Name");
         echo json_encode($result_arr);
-      exit;
+        exit;
     }
     if (!(preg_match('/^[a-zA-Z ]{1,30}$/', $lastname))) {
-        $result_arr[]=array("message"=>"Invalid Last Name");
+        $result_arr[] = array("message" => "Invalid Last Name");
         echo json_encode($result_arr);
-      exit;
+        exit;
     }
 
     $query = "SELECT `email` FROM $tbname";
-    $result = $conn -> query($query);
+    $result = $conn->query($query);
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             if ($row["email"] == $email) {
                 $return_arr[] = array("message" => "email aready exists");
                 echo json_encode($return_arr);
                 exit;
-                }
             }
         }
-    
+    }
+    if (strlen($password)<6) {
+        $result_arr[]=array("message"=>"Min. Length of Password is 6");
+        echo json_encode($result_arr);
+      exit;
+    }
+
+
 
 
     $sql = "INSERT INTO $tbname (`firstname`,`lastname`,`email`,`password`) VALUES ('$firstname', '$lastname','$email','$password')";
@@ -41,10 +48,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo json_encode($return_arr);
 
     }
-    
+
 
 }
-    
+
 
 
 

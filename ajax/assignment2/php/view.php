@@ -23,7 +23,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         echo json_encode($return_arr);
 
-    } 
+    } else {
+        $return_arr[] = array("message" => "Enter something to show");
+        echo json_encode($return_arr);
+    }
 }
 
 ?>

@@ -15,7 +15,7 @@ $(document).ready(function () {
             data: formData,
             dataType: "JSON",
             encode: true,
-            success: function (response) {
+            success: function(response) {
                 if (response[0]['message']) {
                     alert(response[0]['message']);
                     window.location.href = 'view.html';

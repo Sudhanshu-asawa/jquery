@@ -1,13 +1,20 @@
 <?php
 include 'dbconfig.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-    
-
-
-    $updatetitle = $_POST["Post_title"];
-    $updatedes = $_POST["Post_description"];
     $id = $_POST["id"];
+    $updatetitle = $conn->real_escape_string($_POST['Post_title']);
+    if (!(preg_match('/^[a-zA-Z0-9 ]{1,30}$/', $updatetitle))) {
+        $result_arr[]=array("message"=>"Invalid Post Title");
+        echo json_encode($result_arr);
+      exit;
+    }
+    $updatedes = $conn->real_escape_string($_POST['Post_description']);
+    if (!(preg_match('/^[a-zA-Z0-9 ]{1,30}$/', $updatetitle))) {
+        $result_arr[]=array("message"=>"Invalid Post Description ");
+        echo json_encode($result_arr);
+      exit;
+    }
+
     $check = "SELECT `id` FROM $tbname";
     $result1 = mysqli_query($conn, $check);
     $num = $result1->num_rows;

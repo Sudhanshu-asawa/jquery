@@ -17,7 +17,7 @@ $(document).ready(function () {
                 console.log(response);
                 if (response[0]['success']) {
                     alert("Login Sucessful");
-                    window.location.href = 'insert.html';
+                    window.location.href = 'view.html';
 
                 }
                 else {

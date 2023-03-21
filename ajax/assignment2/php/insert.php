@@ -15,6 +15,11 @@ include  'dbconfig.php';
       exit;
     }
     $userid=$_POST['userid'];
+    if (!(preg_match('/^[0-9 ]{1,5}$/', $userid))) {
+        $result_arr[]=array("message"=>"Invalid UserID ");
+        echo json_encode($result_arr);
+      exit;
+    }
 
 
     $query = "SELECT `userid` FROM $tbname";
